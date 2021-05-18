@@ -28,7 +28,7 @@ public class Idcard {
             String imgStr = Base64Util.encode(imgData);
             String imgParam = URLEncoder.encode(imgStr, "UTF-8");
 
-            String param = "id_card_side=" + "front" + "&image=" + imgParam;
+            String param = "id_card_side=" + "front" + "&image=" + imgParam+"&detect_risk="+"true";
 
             // 注意这里仅为了简化编码每一次请求都去获取access_token，线上环境access_token有过期时间， 客户端可自行缓存，过期后重新获取。
             String accessToken = AuthService.getAuth();

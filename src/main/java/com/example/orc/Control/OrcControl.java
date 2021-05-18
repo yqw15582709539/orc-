@@ -26,7 +26,7 @@ public class OrcControl {
     static {
 //        StringBuilder filePath = new StringBuilder();
 //        filePath.append(System.getProperty("user.dir")).append("\\src\\main\\resources\\aaa.xlsx");
-        String filePath ="C:\\aaa.xlsx";
+        String filePath ="D:\\aaa.xlsx";
         String columns[] = {"name", "adcode", "citycode"};
         try {
             list = new ExcelUtil().getExcelData(filePath, columns);
