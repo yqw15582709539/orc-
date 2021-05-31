@@ -9,6 +9,8 @@ import com.example.orc.util.Animal;
 import com.example.orc.util.HttpUtil;
 import com.example.orc.util.Idcard;
 import com.google.gson.Gson;
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,13 +28,13 @@ public class OrcControl {
     static {
 //        StringBuilder filePath = new StringBuilder();
 //        filePath.append(System.getProperty("user.dir")).append("\\src\\main\\resources\\aaa.xlsx");
-        String filePath ="D:\\aaa.xlsx";
-        String columns[] = {"name", "adcode", "citycode"};
-        try {
-            list = new ExcelUtil().getExcelData(filePath, columns);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        String filePath ="C:\\aaa.xlsx";
+//        String columns[] = {"name", "adcode", "citycode"};
+//        try {
+//            list = new ExcelUtil().getExcelData(filePath, columns);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @GetMapping(value = "/hello")
